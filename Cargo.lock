@@ -491,20 +491,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "graphql_quickstart"
-version = "0.1.0"
-dependencies = [
- "env_logger",
- "futures",
- "juniper",
- "juniper_warp",
- "log",
- "reqwest",
- "tokio",
- "warp",
-]
-
-[[package]]
 name = "h2"
 version = "0.2.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1103,6 +1089,21 @@ name = "quick-error"
 version = "1.2.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a1d01941d82fa2ab50be1e79e6714289dd7cde78eba4c074bc5a4374f650dfe0"
+
+[[package]]
+name = "quickstart"
+version = "0.1.0"
+dependencies = [
+ "env_logger",
+ "futures",
+ "juniper",
+ "juniper_warp",
+ "log",
+ "reqwest",
+ "serde_json",
+ "tokio",
+ "warp",
+]
 
 [[package]]
 name = "quote"

@@ -1,5 +1,5 @@
 use juniper::{
-    EmptyMutation, 
+    //EmptyMutation, 
     EmptySubscription,
     IntrospectionFormat,
 };
@@ -10,7 +10,7 @@ use quickstart::*;
 fn main() {
     let ctx = Database::new();
     let (res, _errors) = juniper::introspect(
-        &Schema::new(Query, EmptyMutation::new(), EmptySubscription::new()),
+        &Schema::new(Query, Mutations{}, EmptySubscription::new()),
         &ctx,
         IntrospectionFormat::default(),
     ).unwrap();

@@ -32,7 +32,7 @@ impl User {
     /// The friends for a person
     async fn friends(&self, context: &Database) -> Vec<User> {
         self.friend_ids.iter()
-        .map(|id| context.id.lock().unwrap().get(id).unwrap().clone())
+        .map(|id| context.inner.lock().unwrap().id.get(id).unwrap().clone())
         .collect()
     }
 }

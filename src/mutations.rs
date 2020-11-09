@@ -17,7 +17,7 @@ impl Mutations {
         // prove that the context is working within he scope of the call...
         //let id = context.insert(UserInput{kind, name: name.clone(), friend_ids: friend_ids.clone()});
         let id = context.insert(UserInput{kind, name, friend_ids});
-        let result = context.id.lock().unwrap().get(&id).cloned();
+        let result = context.inner.lock().unwrap().id.get(&id).cloned();
         println!("Result {:?}", result);
         Ok(result)
     }
